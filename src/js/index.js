@@ -1,20 +1,7 @@
+import { moveBall } from "../modules/moveBall.js";
+import { generateMap } from "../modules/generateMap.js";
 const ball = document.getElementById("ball");
-document.addEventListener("keydown", handleKeyPress);
-let position = 0;
-
-function handleKeyPress(e) {
-  if (e.code === "ArrowLeft") {
-    position = position - 10;
-  }
-  if (e.code === "ArrowRight") {
-    position = position + 10;
-  }
-  if (position < 0) {
-    position = 0;
-  }
-  refresh();
-}
-
-function refresh() {
-  ball.style.left = position + "px";
-}
+const map = document.getElementById("map");
+let position = { x: 0, y: 0 };
+document.addEventListener("keydown", (e) => moveBall(e, ball, position));
+generateMap(map, 100);
