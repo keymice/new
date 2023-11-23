@@ -1,7 +1,7 @@
 export function testObstacleCollision() {
   const ballRect = ball.getBoundingClientRect();
   const obstacles = document.getElementsByClassName("obstacle");
-  for (i = 0; i < obstacles.length; i++) {
+  for (let i = 0; i < obstacles.length; i++) {
     const obstacleRect = obstacles[i].getBoundingClientRect();
     if (
       ballRect.left < obstacleRect.right &&
@@ -9,7 +9,7 @@ export function testObstacleCollision() {
       ballRect.top < obstacleRect.bottom &&
       ballRect.bottom > obstacleRect.top
     ) {
-      console.log("Collision!!");
+      console.log("Collision!");
     }
   }
 }

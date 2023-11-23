@@ -7,6 +7,6 @@ export function testEdgeCollision() {
     ballRect.top < mapRect.top ||
     ballRect.bottom > mapRect.bottom
   ) {
-    console.log("Collision!!");
+    console.log("Collision!");
   }
 }

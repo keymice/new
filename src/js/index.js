@@ -1,5 +1,5 @@
-import { moveBall } from "../modules/moveBall.js";
-import { generateMap } from "../modules/generateMap.js";
+import { moveBall } from "./modules/moveBall.js";
+import { generateMap } from "./modules/generateMap.js";
 const ball = document.getElementById("ball");
 const map = document.getElementById("map");
 let position = { x: 0, y: 0 };

@@ -1,4 +1,4 @@
-export function generateMap(map, numverOfObstacles) {
+export function generateMap(map, numberOfObstacles) {
   for (let i = 0; i < numberOfObstacles; i++) {
     const obstacle = document.createElement("div");
     obstacle.classList.add("obstacle");
@@ -6,7 +6,7 @@ export function generateMap(map, numverOfObstacles) {
     obstacle.style.top = Math.floor(Math.random() * 100) + "vh";
     map.appendChild(obstacle);
     console.log(
-      "Adding obstacle at ${obstacle.style.left}, ${obstacle.style.top}"
+      `Adding obstacle at ${obstacle.style.left}, ${obstacle.style.top}`
     );
   }
 }
